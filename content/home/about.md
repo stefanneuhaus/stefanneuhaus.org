@@ -3,7 +3,7 @@ widget = "about"
 active = true
 date = 2018-05-10T00:00:00
 
-weight = 1
+weight = 10
 
 +++
 
