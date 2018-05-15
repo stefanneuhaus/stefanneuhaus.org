@@ -52,7 +52,7 @@ enableGitInfo = false
 
   # Your details.
   name = "Stefan Neuhaus"
-  role = ""
+  #role = "A website on Software Development -- edited by Stefan Neuhaus"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -259,10 +259,10 @@ enableGitInfo = false
 #  url = "#publications_selected"
 #  weight = 2
 
-#[[menu.main]]
-#  name = "Posts"
-#  url = "#posts"
-#  weight = 3
+[[menu.main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 3
 
 #[[menu.main]]
 #  name = "Projects"

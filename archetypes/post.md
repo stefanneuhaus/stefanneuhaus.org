@@ -1,19 +1,21 @@
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
+title = "{{ replaceRE "^[0-9]*_(.*)" "$1" .TranslationBaseName | humanize }}"
+slug = "{{ replaceRE "^[0-9]*_(.*)" "$1" .TranslationBaseName | urlize }}"
 date = {{ .Date }}
 draft = false
 
 tags = []
 categories = []
 
-# Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.
-# Use `caption` to display an image caption.
-#   Markdown linking is allowed, e.g. `caption = "[Image credit](http://example.org)"`.
-# Set `preview` to `false` to disable the thumbnail in listings.
+abstract = ""
+
+math = false
+
 [header]
 image = ""
 caption = ""
 preview = true
 
 +++
+
 
