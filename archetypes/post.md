@@ -9,6 +9,7 @@ categories = []
 
 abstract = ""
 
+highlight = false
 math = false
 
 [header]

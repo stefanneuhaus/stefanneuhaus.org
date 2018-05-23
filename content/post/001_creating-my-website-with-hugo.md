@@ -8,6 +8,7 @@ categories = []
 
 abstract = "I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."
 
+highlight = true
 math = true
 
 [header]
