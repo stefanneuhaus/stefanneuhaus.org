@@ -1,3 +1,0 @@
-[submodule "themes/academic"]
-	path = themes/academic
-	url = git@github.com:stefanneuhaus/hugo-academic.git

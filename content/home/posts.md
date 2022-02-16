@@ -1,21 +1,26 @@
-+++
-widget = "posts"
-active = true
-date = 2018-05-13T00:00:00
+---
+widget: pages
+headless: true
+weight: 20
 
-title = "Blog Posts"
-subtitle = ""
+title: Recent Posts
+subtitle:
 
-weight = 20
+content:
+  filters:
+    folders:
+      - post
+    tag: ''
+    category: ''
+    author: ''
+    exclude_featured: false
+    exclude_future: false
+    exclude_past: false
+  count: 5
+  offset: 0
+  order: desc
 
-tags_include = []
-tags_exclude = []
-
-# Number of posts to list.
-count = 5
-
-# List format.
-#   0 = Simple
-#   1 = Detailed
-list_format = 0
-+++
+design:
+  view: compact
+  columns: '2'
+---

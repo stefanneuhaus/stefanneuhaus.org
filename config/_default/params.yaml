@@ -1,0 +1,42 @@
+appearance:
+  theme_day: earth
+  theme_night: minimal
+  font: minimal
+  font_size: L
+
+header:
+  navbar:
+    show_day_night: true
+    show_search: true
+
+footer:
+  copyright:
+    notice: '© {year} Stefan Neuhaus'
+
+locale:
+  date_format: '2006-01-02'
+  time_format: '15:04'
+
+profile: true
+sharing: true
+
+features:
+  search:
+    provider: wowchemy
+    wowchemy:
+      min_length: 3
+      threshold: 0.3
+  syntax_highlighter:
+    enable: true
+
+marketing:
+  seo:
+    site_type: Person
+    local_business_type: ''
+    description: ''
+    twitter: 'toothrot617'
+
+extensions:
+  icon:
+    pack:
+      ai: true
