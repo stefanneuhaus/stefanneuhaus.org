@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://stefanneuhaus.github.io/sitemap.xml

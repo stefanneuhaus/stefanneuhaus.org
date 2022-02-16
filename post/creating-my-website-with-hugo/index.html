@@ -1,0 +1,324 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.4.0 for Hugo">
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<meta name=author content="Stefan Neuhaus">
+<meta name=description content="I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology.">
+<link rel=alternate hreflang=en-us href=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/>
+<meta name=theme-color content="#707070">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=stylesheet href=/css/wowchemy.a55d2a2062d6fd4b981d51c5c2ada297.css>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@toothrot617">
+<meta property="twitter:creator" content="@toothrot617">
+<meta property="og:site_name" content="Stefan Neuhaus">
+<meta property="og:url" content="https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/">
+<meta property="og:title" content="Creating my website with Hugo | Stefan Neuhaus">
+<meta property="og:description" content="I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."><meta property="og:image" content="https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/featured.jpg">
+<meta property="twitter:image" content="https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/featured.jpg"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2018-05-17T08:35:00+02:00">
+<meta property="article:modified_time" content="2022-02-13T16:28:14+01:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/"},"headline":"Creating my website with Hugo","image":["https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/featured.jpg"],"datePublished":"2018-05-17T08:35:00+02:00","dateModified":"2022-02-13T16:28:14+01:00","author":{"@type":"Person","name":"Stefan Neuhaus"},"publisher":{"@type":"Organization","name":"Stefan Neuhaus","logo":{"@type":"ImageObject","url":"https://stefanneuhaus.github.io/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_192x192_fill_lanczos_center_3.png"}},"description":"I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."}</script>
+<title>Creating my website with Hugo | Stefan Neuhaus</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=e894551fe3497c19b3bc71110a2a406e>
+<script src=/js/wowchemy-init.min.ced4c4e0190cf57ce42494e355f2bdf6.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<header class=header--fixed>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Stefan Neuhaus</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Stefan Neuhaus</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>About</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#posts><span>Posts</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Creating my website with Hugo</h1>
+<div class=article-metadata>
+<span class=article-date>
+Last updated on
+2022-02-13
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+7 min read
+</span>
+</div>
+</div>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:405px>
+<div style=position:relative>
+<img src=/post/creating-my-website-with-hugo/featured_hu164222f4271b40b9ea4c8a67893dd525_201373_720x2500_fit_q75_h2_lanczos.webp width=720 height=405 alt class=featured-image>
+<span class=article-header-caption>Isle of Skye 🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<h4 id=why>Why??</h4>
+<p>For some time I&rsquo;ve had a strange need for a personal website, though I didn&rsquo;t even know what content to share. The idea of having a blog felt a bit weird
+to me, as I was wondering for whom this might be meaningful. It took me a while, but meanwhile I think completely differently about this.</p>
+<ol>
+<li>
+<p>You do not have to write long papers that meet academic requirements. Small things can matter, and also imperfect ones. Admittedly far from being imperfect,
+Adam Bien&rsquo;s <a href=http://adambien.blog/roller/abien/ target=_blank rel=noopener>Blog</a> posts are always succinct and usually provide elegant and low complexity solutions to very concrete
+problems. It&rsquo;s especially because of this brevity that they are easily consumable and very worth reading. Having the infrastructure already set up lowers the
+hurdles to publish even small content.</p>
+</li>
+<li>
+<p>Other people and companies can gain insight into your interests and current projects. This can also be helpful to get in touch.</p>
+</li>
+<li>
+<p>You do not know if you have fully understood a certain topic until you have explained it to someone or have written it down. In turn when blogging you
+ensure a proper understanding.</p>
+</li>
+</ol>
+<p>And at least with every blog post I will get some more practice with my English skills. 🇺🇸</p>
+<h4 id=how>How?</h4>
+<p>While doing a first bit of web research for appropriate technologies it seemed that <a href=https://wordpress.org/ target=_blank rel=noopener>WordPress</a> is the most popular system for websites
+with blogs. However, I couldn&rsquo;t bring myself to accept the downsides. Under no circumstances I wanted to host the system myself. Even though there are
+countless WordPress hosting providers you either have annoying limitations like ads on your site or a regular downtime. Or you have to pay for the service.
+Besides that WordPress felt like a complex and feature-blown system that is hard to tame, especially if you are relying on the installation of your hosting
+provider and cannot <em>just apply a change</em>. Migrating WordPress sites from one provider to another seems to be easily manageable by export/import functionality.
+Nevertheless, you still have some kind of vendor lock-in for your precious content.</p>
+<p>Inspired by Trisha Gee&rsquo;s blog post <a href=https://trishagee.github.io/project/atom-to-hugo/ target=_blank rel=noopener>Converting Blogger to Markdown</a> I came across text file based
+generators for static websites with basic Content Management Features. It&rsquo;s the perfect fit! I can write the content in simple text files, e.g. in Markdown
+syntax. Definitely no vendor lock-in! And I can easily put them into a version control system.
+I use a GitHub <a href=https://github.com/stefanneuhaus/stefanneuhaus.org target=_blank rel=noopener>repository</a> for this. As I also have the local copy of the repository on my machine I
+feel sufficiently safe and even resign an additional backup. It takes a mere run of the generator to get the readily deployable website in the output
+directory. Upload this directory to the web hosting provider of your choice and you&rsquo;re done. I chose <a href=https://pages.github.com/ target=_blank rel=noopener>GitHub Pages</a>, simply
+because it&rsquo;s free, I already have a GitHub account, and I like the deployment process of just doing a git commit/push to
+my <a href=https://github.com/stefanneuhaus/stefanneuhaus.github.io target=_blank rel=noopener>repository</a>.</p>
+<h4 id=jekyll-or-hugo>Jekyll or Hugo?</h4>
+<p>The two currently most popular static site generators are <a href=https://jekyllrb.com/ target=_blank rel=noopener>Jekyll</a> and <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a>, at which I had a closer look. I took
+the following factors into account:</p>
+<ul>
+<li>Still being actively developed and maintained?</li>
+<li>Documentation</li>
+<li>Programming language, installation, and dependencies</li>
+<li>Performance</li>
+<li>Writing/development workflow</li>
+<li>Built-in features</li>
+<li>Extensibility and flexibility</li>
+<li>Theme support</li>
+<li>Syntax highlighting for code samples</li>
+<li>Support for mathematical notation in content</li>
+</ul>
+<p>There is a recently published and very nice comparison by Chris Macrae, which I used as a starting point:
+<a href=https://forestry.io/blog/hugo-and-jekyll-compared/ target=_blank rel=noopener>Hugo or Jekyll? 6 Factors You Should Know</a>. As my requirements are fairly low and both options are
+battle-tried mature tools, it is clear that either of them would definitely meet my requirements. Nevertheless, I did a comparison.</p>
+<p>Soon a tendency towards Hugo became apparent. Although my site is just a tiny one I cannot make a secret of the fact, that performance was one reason. And
+this is where Hugo beats the pants off Jekyll. I also liked the ease of installation, as Hugo is written in Go and comes as a self-contained binary. This
+seemed easier than fiddling around with the Ruby Gems of Jekyll. I have not been intimidated by the reputed steeper learning curve of Hugo&rsquo;s template syntax
+but rather appreciated the rich feature set. This is purely subjective of course.</p>
+<h4 id=layout>Layout</h4>
+<p>So I gave Hugo a try. First I had to decide if I wanted to write all layout templates from scratch or pick one of the numerous available
+<a href=https://themes.gohugo.io/ target=_blank rel=noopener>themes</a>. As I want to concentrate on the content and do not like to re-invent the wheel, I decided to use a theme as a basis.
+Besides that I am no UI/UX expert and it probably would take me a lot of time to come up with an appealing result. I did not agonize about this decision for
+a long time: If I do not like my current theme anymore, switching themes should be a piece of cake.</p>
+<p>As a theme I chose <a href=https://sourcethemes.com/academic/ target=_blank rel=noopener>Academic</a>, mainly because of its clean design and as it is still being actively maintained. As a plus it
+ships with a couple of nice widgets that you can integrate into your site.</p>
+<p><em>Using</em> a theme is done by copying it to the <code>themes/</code> directory and enabling it in the site config file. I did not just <em>copy</em> the theme, but added a fork of
+the theme <a href=https://github.com/gcushen/hugo-academic target=_blank rel=noopener>repository</a> as a Git submodule. This has basically two advantages. I can easily benefit from new releases
+simply by synchronizing my fork and updating the module. Furthermore, if I add features or bug fixes to the theme that also others might find useful, I can
+easily create a pull request.</p>
+<h4 id=experience-so-far>Experience so far</h4>
+<p>So what is my impression after toying with Hugo for a couple of hours and writing my first blog post?</p>
+<p>The installation is super easy and you quickly get to the point where you have set up a basic site that can be taken as a starting point for further
+improvements. From the decision to try out Hugo to an already nice looking example site it took me around 1 hour.</p>
+<p>The workflow is really awesome. Running <code>hugo server</code> generates the site to a directory and starts a web server to serve it. A watch dog recognizes any
+changes to input files and triggers a re-build. In combination with the live-reload feature and a browser window on the second screen or split screen, you
+can thereby get a WYSIWYG-like experience during writing.</p>
+<p>Here Hugo&rsquo;s performance really excels. I do not care if the final build of my small site takes a second or a minute. But during writing I like to have a
+regular look at the rendered result. And then even seemingly small generation times could easily get annoying. When saving changes to the file of this
+(nearly ready) blog post the changes become almost immediately visible in my browser window. Hugo states total times of something between 7 and 20 ms. But I
+also observed some hiccups. Now and then the watch dog fails to detect my changes. But this is no big deal &mdash; I simply save again or restart the server.</p>
+<p>The documentation makes an excellent impression. It is very detailed and I found answers to all my questions so far. To me it is great fun to explore all the
+possibilities of Hugo and apply changes to the site layout. If you do not want to provide these changes as a pull request to the theme repository, Hugo
+greatly supports this. Besides the theme directory there is an identically structured global site directory which takes precedence over the theme files.
+E.g. if you wanted to add a keywords meta tag to the page header (which you <a href=https://yoast.com/meta-keywords/ target=_blank rel=noopener>do not want anymore</a>) you would simply copy
+<code>themes/academic/layouts/partials/header.html</code> to <code>layouts/partials/header.html</code> and add the following line</p>
+<pre><code class=language-html>&lt;meta name=&quot;keywords&quot; content=&quot;{{ delimit .Keywords &quot;, &quot; }}&quot;&gt;
+</code></pre>
+<p>As your changes reside in a dedicated directory it is always immediately clear in what aspects your site layout deviates from the theme.</p>
+<p>And what about syntax highlighting? A first try using standard Markdown syntax looks quite appealing:</p>
+<pre><code class=language-java>public class Main {
+    public static void main(String[] args) {
+        System.out.println(&quot;Hello world!&quot;);
+    }
+}
+</code></pre>
+<p>In one of the next blog posts I will explore further capabilities like adding line numbers, folding etc.</p>
+<p>For writing mathematical stuff you have basically all the math notation capabilities of $\LaTeX$ available. First experiments work exactly as expected:
+$$ x_{1,2} = -\frac{p}{2} \pm \sqrt{\frac{p^2}{4} - q} $$</p>
+<p>Overall I can state that I am super happy with the decision so far! Let&rsquo;s see how this evolves when I get to know Hugo a bit better. 😉</p>
+<h4 id=hello-world>Hello World!</h4>
+<p>The bare site went online on May 11, 2018. This is my first blog post. Feels great to be prepared for easily providing more content! 🚀</p>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tags/hugo/>Hugo</a>
+<a class="badge badge-light" href=/tags/static-site-generator/>static site generator</a>
+<a class="badge badge-light" href=/tags/cms/>CMS</a>
+</div>
+<div class=share-box>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/&text=Creating%20my%20website%20with%20Hugo" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Creating%20my%20website%20with%20Hugo%20https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Creating%20my%20website%20with%20Hugo&body=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/" target=_blank rel=noopener class=share-btn-email aria-label=envelope>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://stefanneuhaus.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/stefan/avatar_hu66d10eb0b48eabc157c3de1f3950f416_11647_270x270_fill_q75_lanczos_center.jpg alt="Stefan Neuhaus"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://stefanneuhaus.github.io/>Stefan Neuhaus</a></h5>
+<h6 class=card-subtitle>Lecturer</h6>
+<p class=card-text>My interests include Software Development and Sports. 🏃🏼‍♂️</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href="mailto:?to=stefan@stefanneuhaus.org">
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/toothrot617 target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/stefanneuhaus target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://hub.docker.com/u/stefanneuhaus target=_blank rel=noopener>
+<i class="fab fa-docker"></i>
+</a>
+</li>
+<li>
+<a href=https://www.xing.com/profile/Stefan_Neuhaus37 target=_blank rel=noopener>
+<i class="fab fa-xing"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class="powered-by copyright-license-text">
+© 2022 Stefan Neuhaus
+</p>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<script src=/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin=anonymous></script>
+<script id=search-hit-fuse-template type=text/x-template>
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+<script src=https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin=anonymous></script>
+<script id=page-data type=application/json>{"use_headroom":true}</script>
+<script src=/js/wowchemy-headroom.79343bd00de25e04f03b6af2819f8643.js type=module></script>
+<script src=/en/js/wowchemy.min.5f4e05ba88e5d1340380638933489741.js></script>
+</body>
+</html>

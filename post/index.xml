@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Stefan Neuhaus</title><link>https://stefanneuhaus.github.io/post/</link><atom:link href="https://stefanneuhaus.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><copyright>© 2018 Stefan Neuhaus</copyright><lastBuildDate>Thu, 17 May 2018 08:35:00 +0200</lastBuildDate><image><url>https://stefanneuhaus.github.io/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://stefanneuhaus.github.io/post/</link></image><item><title>Creating my website with Hugo</title><link>https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/</link><pubDate>Thu, 17 May 2018 08:35:00 +0200</pubDate><guid>https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/</guid><description>&lt;h4 id="why">Why??&lt;/h4>
+&lt;p>For some time I&amp;rsquo;ve had a strange need for a personal website, though I didn&amp;rsquo;t even know what content to share. The idea of having a blog felt a bit weird
+to me, as I was wondering for whom this might be meaningful. It took me a while, but meanwhile I think completely differently about this.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>You do not have to write long papers that meet academic requirements. Small things can matter, and also imperfect ones. Admittedly far from being imperfect,
+Adam Bien&amp;rsquo;s &lt;a href="http://adambien.blog/roller/abien/" target="_blank" rel="noopener">Blog&lt;/a> posts are always succinct and usually provide elegant and low complexity solutions to very concrete
+problems. It&amp;rsquo;s especially because of this brevity that they are easily consumable and very worth reading. Having the infrastructure already set up lowers the
+hurdles to publish even small content.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Other people and companies can gain insight into your interests and current projects. This can also be helpful to get in touch.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>You do not know if you have fully understood a certain topic until you have explained it to someone or have written it down. In turn when blogging you
+ensure a proper understanding.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>And at least with every blog post I will get some more practice with my English skills. 🇺🇸&lt;/p>
+&lt;h4 id="how">How?&lt;/h4>
+&lt;p>While doing a first bit of web research for appropriate technologies it seemed that &lt;a href="https://wordpress.org/" target="_blank" rel="noopener">WordPress&lt;/a> is the most popular system for websites
+with blogs. However, I couldn&amp;rsquo;t bring myself to accept the downsides. Under no circumstances I wanted to host the system myself. Even though there are
+countless WordPress hosting providers you either have annoying limitations like ads on your site or a regular downtime. Or you have to pay for the service.
+Besides that WordPress felt like a complex and feature-blown system that is hard to tame, especially if you are relying on the installation of your hosting
+provider and cannot &lt;em>just apply a change&lt;/em>. Migrating WordPress sites from one provider to another seems to be easily manageable by export/import functionality.
+Nevertheless, you still have some kind of vendor lock-in for your precious content.&lt;/p>
+&lt;p>Inspired by Trisha Gee&amp;rsquo;s blog post &lt;a href="https://trishagee.github.io/project/atom-to-hugo/" target="_blank" rel="noopener">Converting Blogger to Markdown&lt;/a> I came across text file based
+generators for static websites with basic Content Management Features. It&amp;rsquo;s the perfect fit! I can write the content in simple text files, e.g. in Markdown
+syntax. Definitely no vendor lock-in! And I can easily put them into a version control system.
+I use a GitHub &lt;a href="https://github.com/stefanneuhaus/stefanneuhaus.org" target="_blank" rel="noopener">repository&lt;/a> for this. As I also have the local copy of the repository on my machine I
+feel sufficiently safe and even resign an additional backup. It takes a mere run of the generator to get the readily deployable website in the output
+directory. Upload this directory to the web hosting provider of your choice and you&amp;rsquo;re done. I chose &lt;a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages&lt;/a>, simply
+because it&amp;rsquo;s free, I already have a GitHub account, and I like the deployment process of just doing a git commit/push to
+my &lt;a href="https://github.com/stefanneuhaus/stefanneuhaus.github.io" target="_blank" rel="noopener">repository&lt;/a>.&lt;/p>
+&lt;h4 id="jekyll-or-hugo">Jekyll or Hugo?&lt;/h4>
+&lt;p>The two currently most popular static site generators are &lt;a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll&lt;/a> and &lt;a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo&lt;/a>, at which I had a closer look. I took
+the following factors into account:&lt;/p>
+&lt;ul>
+&lt;li>Still being actively developed and maintained?&lt;/li>
+&lt;li>Documentation&lt;/li>
+&lt;li>Programming language, installation, and dependencies&lt;/li>
+&lt;li>Performance&lt;/li>
+&lt;li>Writing/development workflow&lt;/li>
+&lt;li>Built-in features&lt;/li>
+&lt;li>Extensibility and flexibility&lt;/li>
+&lt;li>Theme support&lt;/li>
+&lt;li>Syntax highlighting for code samples&lt;/li>
+&lt;li>Support for mathematical notation in content&lt;/li>
+&lt;/ul>
+&lt;p>There is a recently published and very nice comparison by Chris Macrae, which I used as a starting point:
+&lt;a href="https://forestry.io/blog/hugo-and-jekyll-compared/" target="_blank" rel="noopener">Hugo or Jekyll? 6 Factors You Should Know&lt;/a>. As my requirements are fairly low and both options are
+battle-tried mature tools, it is clear that either of them would definitely meet my requirements. Nevertheless, I did a comparison.&lt;/p>
+&lt;p>Soon a tendency towards Hugo became apparent. Although my site is just a tiny one I cannot make a secret of the fact, that performance was one reason. And
+this is where Hugo beats the pants off Jekyll. I also liked the ease of installation, as Hugo is written in Go and comes as a self-contained binary. This
+seemed easier than fiddling around with the Ruby Gems of Jekyll. I have not been intimidated by the reputed steeper learning curve of Hugo&amp;rsquo;s template syntax
+but rather appreciated the rich feature set. This is purely subjective of course.&lt;/p>
+&lt;h4 id="layout">Layout&lt;/h4>
+&lt;p>So I gave Hugo a try. First I had to decide if I wanted to write all layout templates from scratch or pick one of the numerous available
+&lt;a href="https://themes.gohugo.io/" target="_blank" rel="noopener">themes&lt;/a>. As I want to concentrate on the content and do not like to re-invent the wheel, I decided to use a theme as a basis.
+Besides that I am no UI/UX expert and it probably would take me a lot of time to come up with an appealing result. I did not agonize about this decision for
+a long time: If I do not like my current theme anymore, switching themes should be a piece of cake.&lt;/p>
+&lt;p>As a theme I chose &lt;a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic&lt;/a>, mainly because of its clean design and as it is still being actively maintained. As a plus it
+ships with a couple of nice widgets that you can integrate into your site.&lt;/p>
+&lt;p>&lt;em>Using&lt;/em> a theme is done by copying it to the &lt;code>themes/&lt;/code> directory and enabling it in the site config file. I did not just &lt;em>copy&lt;/em> the theme, but added a fork of
+the theme &lt;a href="https://github.com/gcushen/hugo-academic" target="_blank" rel="noopener">repository&lt;/a> as a Git submodule. This has basically two advantages. I can easily benefit from new releases
+simply by synchronizing my fork and updating the module. Furthermore, if I add features or bug fixes to the theme that also others might find useful, I can
+easily create a pull request.&lt;/p>
+&lt;h4 id="experience-so-far">Experience so far&lt;/h4>
+&lt;p>So what is my impression after toying with Hugo for a couple of hours and writing my first blog post?&lt;/p>
+&lt;p>The installation is super easy and you quickly get to the point where you have set up a basic site that can be taken as a starting point for further
+improvements. From the decision to try out Hugo to an already nice looking example site it took me around 1 hour.&lt;/p>
+&lt;p>The workflow is really awesome. Running &lt;code>hugo server&lt;/code> generates the site to a directory and starts a web server to serve it. A watch dog recognizes any
+changes to input files and triggers a re-build. In combination with the live-reload feature and a browser window on the second screen or split screen, you
+can thereby get a WYSIWYG-like experience during writing.&lt;/p>
+&lt;p>Here Hugo&amp;rsquo;s performance really excels. I do not care if the final build of my small site takes a second or a minute. But during writing I like to have a
+regular look at the rendered result. And then even seemingly small generation times could easily get annoying. When saving changes to the file of this
+(nearly ready) blog post the changes become almost immediately visible in my browser window. Hugo states total times of something between 7 and 20 ms. But I
+also observed some hiccups. Now and then the watch dog fails to detect my changes. But this is no big deal &amp;mdash; I simply save again or restart the server.&lt;/p>
+&lt;p>The documentation makes an excellent impression. It is very detailed and I found answers to all my questions so far. To me it is great fun to explore all the
+possibilities of Hugo and apply changes to the site layout. If you do not want to provide these changes as a pull request to the theme repository, Hugo
+greatly supports this. Besides the theme directory there is an identically structured global site directory which takes precedence over the theme files.
+E.g. if you wanted to add a keywords meta tag to the page header (which you &lt;a href="https://yoast.com/meta-keywords/" target="_blank" rel="noopener">do not want anymore&lt;/a>) you would simply copy
+&lt;code>themes/academic/layouts/partials/header.html&lt;/code> to &lt;code>layouts/partials/header.html&lt;/code> and add the following line&lt;/p>
+&lt;pre>&lt;code class="language-html">&amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;{{ delimit .Keywords &amp;quot;, &amp;quot; }}&amp;quot;&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;p>As your changes reside in a dedicated directory it is always immediately clear in what aspects your site layout deviates from the theme.&lt;/p>
+&lt;p>And what about syntax highlighting? A first try using standard Markdown syntax looks quite appealing:&lt;/p>
+&lt;pre>&lt;code class="language-java">public class Main {
+public static void main(String[] args) {
+System.out.println(&amp;quot;Hello world!&amp;quot;);
+}
+}
+&lt;/code>&lt;/pre>
+&lt;p>In one of the next blog posts I will explore further capabilities like adding line numbers, folding etc.&lt;/p>
+&lt;p>For writing mathematical stuff you have basically all the math notation capabilities of $\LaTeX$ available. First experiments work exactly as expected:
+$$ x_{1,2} = -\frac{p}{2} \pm \sqrt{\frac{p^2}{4} - q} $$&lt;/p>
+&lt;p>Overall I can state that I am super happy with the decision so far! Let&amp;rsquo;s see how this evolves when I get to know Hugo a bit better. 😉&lt;/p>
+&lt;h4 id="hello-world">Hello World!&lt;/h4>
+&lt;p>The bare site went online on May 11, 2018. This is my first blog post. Feels great to be prepared for easily providing more content! 🚀&lt;/p></description></item></channel></rss>
