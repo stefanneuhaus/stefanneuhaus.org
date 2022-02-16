@@ -9,7 +9,7 @@
 <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
 <meta name=author content="Stefan Neuhaus">
 <meta name=description content="I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology.">
-<link rel=alternate hreflang=en-us href=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/>
+<link rel=alternate hreflang=en-us href=https://stefanneuhaus.org/post/creating-my-website-with-hugo/>
 <meta name=theme-color content="#707070">
 <script src=/js/mathjax-config.js></script>
 <link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
@@ -20,18 +20,18 @@
 <link rel=manifest href=/manifest.webmanifest>
 <link rel=icon type=image/png href=/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_32x32_fill_lanczos_center_3.png>
 <link rel=apple-touch-icon type=image/png href=/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_180x180_fill_lanczos_center_3.png>
-<link rel=canonical href=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/>
+<link rel=canonical href=https://stefanneuhaus.org/post/creating-my-website-with-hugo/>
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:site" content="@toothrot617">
 <meta property="twitter:creator" content="@toothrot617">
 <meta property="og:site_name" content="Stefan Neuhaus">
-<meta property="og:url" content="https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/">
+<meta property="og:url" content="https://stefanneuhaus.org/post/creating-my-website-with-hugo/">
 <meta property="og:title" content="Creating my website with Hugo | Stefan Neuhaus">
-<meta property="og:description" content="I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."><meta property="og:image" content="https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/featured.jpg">
-<meta property="twitter:image" content="https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/featured.jpg"><meta property="og:locale" content="en-us">
+<meta property="og:description" content="I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."><meta property="og:image" content="https://stefanneuhaus.org/post/creating-my-website-with-hugo/featured.jpg">
+<meta property="twitter:image" content="https://stefanneuhaus.org/post/creating-my-website-with-hugo/featured.jpg"><meta property="og:locale" content="en-us">
 <meta property="article:published_time" content="2018-05-17T08:35:00+02:00">
 <meta property="article:modified_time" content="2022-02-13T16:28:14+01:00">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/"},"headline":"Creating my website with Hugo","image":["https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/featured.jpg"],"datePublished":"2018-05-17T08:35:00+02:00","dateModified":"2022-02-13T16:28:14+01:00","author":{"@type":"Person","name":"Stefan Neuhaus"},"publisher":{"@type":"Organization","name":"Stefan Neuhaus","logo":{"@type":"ImageObject","url":"https://stefanneuhaus.github.io/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_192x192_fill_lanczos_center_3.png"}},"description":"I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stefanneuhaus.org/post/creating-my-website-with-hugo/"},"headline":"Creating my website with Hugo","image":["https://stefanneuhaus.org/post/creating-my-website-with-hugo/featured.jpg"],"datePublished":"2018-05-17T08:35:00+02:00","dateModified":"2022-02-13T16:28:14+01:00","author":{"@type":"Person","name":"Stefan Neuhaus"},"publisher":{"@type":"Organization","name":"Stefan Neuhaus","logo":{"@type":"ImageObject","url":"https://stefanneuhaus.org/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_192x192_fill_lanczos_center_3.png"}},"description":"I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology."}</script>
 <title>Creating my website with Hugo | Stefan Neuhaus</title>
 </head>
 <body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=e894551fe3497c19b3bc71110a2a406e>
@@ -236,26 +236,26 @@ $$ x_{1,2} = -\frac{p}{2} \pm \sqrt{\frac{p^2}{4} - q} $$</p>
 <div class=share-box>
 <ul class=share>
 <li>
-<a href="https://twitter.com/intent/tweet?url=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/&text=Creating%20my%20website%20with%20Hugo" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter>
+<a href="https://twitter.com/intent/tweet?url=https://stefanneuhaus.org/post/creating-my-website-with-hugo/&text=Creating%20my%20website%20with%20Hugo" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter>
 <i class="fab fa-twitter"></i>
 </a>
 </li>
 <li>
-<a href="whatsapp://send?text=Creating%20my%20website%20with%20Hugo%20https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp>
+<a href="whatsapp://send?text=Creating%20my%20website%20with%20Hugo%20https://stefanneuhaus.org/post/creating-my-website-with-hugo/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp>
 <i class="fab fa-whatsapp"></i>
 </a>
 </li>
 <li>
-<a href="mailto:?subject=Creating%20my%20website%20with%20Hugo&body=https://stefanneuhaus.github.io/post/creating-my-website-with-hugo/" target=_blank rel=noopener class=share-btn-email aria-label=envelope>
+<a href="mailto:?subject=Creating%20my%20website%20with%20Hugo&body=https://stefanneuhaus.org/post/creating-my-website-with-hugo/" target=_blank rel=noopener class=share-btn-email aria-label=envelope>
 <i class="fas fa-envelope"></i>
 </a>
 </li>
 </ul>
 </div>
 <div class="media author-card content-widget-hr">
-<a href=https://stefanneuhaus.github.io/><img class="avatar mr-3 avatar-circle" src=/authors/stefan/avatar_hu66d10eb0b48eabc157c3de1f3950f416_11647_270x270_fill_q75_lanczos_center.jpg alt="Stefan Neuhaus"></a>
+<a href=https://stefanneuhaus.org/><img class="avatar mr-3 avatar-circle" src=/authors/stefan/avatar_hu66d10eb0b48eabc157c3de1f3950f416_11647_270x270_fill_q75_lanczos_center.jpg alt="Stefan Neuhaus"></a>
 <div class=media-body>
-<h5 class=card-title><a href=https://stefanneuhaus.github.io/>Stefan Neuhaus</a></h5>
+<h5 class=card-title><a href=https://stefanneuhaus.org/>Stefan Neuhaus</a></h5>
 <h6 class=card-subtitle>Lecturer</h6>
 <p class=card-text>My interests include Software Development and Sports. 🏃🏼‍♂️</p>
 <ul class=network-icon aria-hidden=true>
