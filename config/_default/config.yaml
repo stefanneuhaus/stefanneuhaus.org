@@ -17,7 +17,7 @@ permalinks:
   categories: /category/:slug/
 disableAliases: true
 outputs:
-  home: [HTML, RSS, WebAppManifest]
+  home: [HTML, JSON, RSS, WebAppManifest]
 imaging:
   resampleFilter: lanczos
 markup:
