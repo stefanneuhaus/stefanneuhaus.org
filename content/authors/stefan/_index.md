@@ -7,7 +7,7 @@ organizations:
 - name: Hochschule des Bundes für öffentliche Verwaltung
   url: https://www.hsbund.de/
 
-bio: My interests include Software Development and Sports. 🏃🏼‍♂️
+bio: My interests include Software Development, Heavy Metal, and Sports. 🏃🏼‍♂️
 
 interests:
 - Software Development

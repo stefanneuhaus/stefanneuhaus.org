@@ -1,20 +1,14 @@
 ---
-title: Creating my website with Hugo
-subtitle: 
-summary: I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/Latex expressions in HTML sites. Finally, I will share my experiences so far with the technology.
-tags: [Hugo, static site generator, CMS]
-categories: []
+title: 'Creating my website with Hugo'
+summary: 'I will explain my reasons for having a blog and a personal website. I will illustrate the preceding decision process for choosing the appropriate technologies. I decided to go with the static site generator Hugo. It is a text file based Content Management System (CMS). I also compared Jekyll to Hugo. I will show some features of Hugo, like support for themes, syntax highlighting, and support for typesetting Math/LaTeX expressions in HTML sites. Finally, I will share my experiences so far with the technology.'
+tags: [HUGO, Academic, static site generator, CMS]
 math: true
 slug: creating-my-website-with-hugo
 date: 2018-05-17T8:35:00+02:00
-lastmod: 2022-02-13T16:28:14+01:00
+lastmod: 2022-02-22T16:28:14+01:00
 
-# To use, add an image named `featured.jpg/png` to your page's folder.
-# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: Isle of Skye 🏴󠁧󠁢󠁳󠁣󠁴󠁿
-  focal_point: ""
-  preview_only: false
+  caption: 'Isle of Skye 🏴󠁧󠁢󠁳󠁣󠁴󠁿'
 ---
 
 
