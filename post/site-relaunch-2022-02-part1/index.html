@@ -1,0 +1,251 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 5.4.0 for Hugo">
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+<link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media=print onload="this.media='all'">
+<meta name=author content="Stefan Neuhaus">
+<meta name=description content="In part #1 of the posts on the site relaunch I will focus on the updates of HUGO and the Academic theme/Wowchemy. I will elaborate on how and why the integration of the Academic theme/Wowchemy with HUGO changed and what the implications are. I will describe how well this update worked for me.">
+<link rel=alternate hreflang=en-us href=https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/>
+<meta name=theme-color content="#707070">
+<link rel=stylesheet href=/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css crossorigin=anonymous title=hl-light media=print onload="this.media='all'">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css crossorigin=anonymous title=hl-dark media=print onload="this.media='all'" disabled>
+<link rel=stylesheet href=/css/wowchemy.a3b1f59c39c7bb2b0ce2ef1f93334518.css>
+<link rel=manifest href=/manifest.webmanifest>
+<link rel=icon type=image/png href=/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_180x180_fill_lanczos_center_3.png>
+<link rel=canonical href=https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/>
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:site" content="@toothrot617">
+<meta property="twitter:creator" content="@toothrot617">
+<meta property="og:site_name" content="Stefan Neuhaus">
+<meta property="og:url" content="https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/">
+<meta property="og:title" content="Site relaunch / part #1 🍻 😎🤘🏼 | Stefan Neuhaus">
+<meta property="og:description" content="In part #1 of the posts on the site relaunch I will focus on the updates of HUGO and the Academic theme/Wowchemy. I will elaborate on how and why the integration of the Academic theme/Wowchemy with HUGO changed and what the implications are. I will describe how well this update worked for me."><meta property="og:image" content="https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/featured.jpg">
+<meta property="twitter:image" content="https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/featured.jpg"><meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2022-02-22T18:43:39+01:00">
+<meta property="article:modified_time" content="2022-02-22T18:43:39+01:00">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/"},"headline":"Site relaunch / part #1 🍻 😎🤘🏼","image":["https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/featured.jpg"],"datePublished":"2022-02-22T18:43:39+01:00","dateModified":"2022-02-22T18:43:39+01:00","author":{"@type":"Person","name":"Stefan Neuhaus"},"publisher":{"@type":"Organization","name":"Stefan Neuhaus","logo":{"@type":"ImageObject","url":"https://stefanneuhaus.org/media/icon_hu2f025202fc1ab895bfa471982d99a791_12706_192x192_fill_lanczos_center_3.png"}},"description":"In part #1 of the posts on the site relaunch I will focus on the updates of HUGO and the Academic theme/Wowchemy. I will elaborate on how and why the integration of the Academic theme/Wowchemy with HUGO changed and what the implications are. I will describe how well this update worked for me."}</script>
+<title>Site relaunch / part #1 🍻 😎🤘🏼 | Stefan Neuhaus</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=page-wrapper data-wc-page-id=c6341c9b2cb0cd5e102d00a1fd6a1c43>
+<script src=/js/wowchemy-init.min.ced4c4e0190cf57ce42494e355f2bdf6.js></script>
+<aside class=search-modal id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=# aria-label=Close><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control aria-label=Search...>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<div class=page-header>
+<header class=header--fixed>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container-xl>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Stefan Neuhaus</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar-content aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Stefan Neuhaus</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>About</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#posts><span>Posts</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+<li class="nav-item dropdown theme-dropdown">
+<a href=# class=nav-link data-toggle=dropdown aria-haspopup=true aria-label="Display preferences">
+<i class="fas fa-moon" aria-hidden=true></i>
+</a>
+<div class=dropdown-menu>
+<a href=# class="dropdown-item js-set-theme-light">
+<span>Light</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-dark">
+<span>Dark</span>
+</a>
+<a href=# class="dropdown-item js-set-theme-auto">
+<span>Automatic</span>
+</a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+</div>
+<div class=page-body>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Site relaunch / part #1 🍻 😎🤘🏼</h1>
+<p class=page-subtitle>Update time: HUGO, Academic theme/Wowchemy</p>
+<div class=article-metadata>
+<span class=article-date>
+2022-02-22
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+3 min read
+</span>
+</div>
+</div>
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style=max-width:720px;max-height:540px>
+<div style=position:relative>
+<img src=/post/site-relaunch-2022-02-part1/featured_hueff65fbcc85bde62236157dd2babcfc4_3436838_720x2500_fit_q75_h2_lanczos.webp width=720 height=540 alt class=featured-image>
+<span class=article-header-caption>Bocca A Reta / Corsica</span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<h2 id=everything-screwed-up->Everything screwed up 💩</h2>
+<p><em>&ldquo;Never change a running system&rdquo;</em> they say &mdash; too bad it didn&rsquo;t run anymore. 😄<br>
+The <a href=/post/creating-my-website-with-hugo>initial setup</a> of this site was as follows:</p>
+<ul>
+<li>Repository #1 holding the site&rsquo;s actual content and the Academic theme referenced as a Git submodule. Together this made the input files for the HUGO build.</li>
+<li>Local installation of HUGO.</li>
+<li>Repository #2 holding the files of the readily built site. This repository was configured to be hosted via GitHub Pages.</li>
+</ul>
+<p>This was a perfect example of <em>&ldquo;works on my machine&rdquo;</em>. After buying my shiny new laptop in December 2021, installing the current version of HUGO and cloning repository #1, I observed that the site failed to build locally. Apparently there have been breaking changes in the meantime. The Academic theme has been reworked completely, meanwhile known as <a href=https://wowchemy.com/ target=_blank rel=noopener>Wowchemy</a>, and the issues were basically everywhere:</p>
+<ul>
+<li>Application of the theme changed to a whole new approach.</li>
+<li>Configuration parameters for the site changed, both core HUGO parameters and theme-specific ones.</li>
+<li>Front matter parameters changed.</li>
+<li>Site widgets changed.</li>
+</ul>
+<h2 id=update-time->Update time! 👻</h2>
+<p>So the task was to restore my capability of publishing content &ndash; though I haven&rsquo;t been very productive in the past, I still want to be capable of doing so! 😉 This meant <strong>updating HUGO and the Academic theme</strong>, i.e. the technologies involved in producing the actual files of the site.</p>
+<p>Since the initial site launch HUGO has evolved towards a modularized system with <a href=https://gohugo.io/hugo-modules/ target=_blank rel=noopener>HUGO Modules</a> being the building blocks. Even a HUGO site is a module itself. And this is the path that Academic respectively Wowchemy <a href=https://wowchemy.com/blog/version-5.0-february-2021/#convert-your-site-to-use-hugo-modules target=_blank rel=noopener>followed</a>: technically speaking Academic is no longer an actual HUGO <em>theme</em> which you apply to your HUGO project. Instead, the Academic functionality has been incorporated into Wowchemy, which is a HUGO Module serving as the main building block of the site. As you can imagine this transformation required some breaking changes. But the cool thing is: HUGO Modules (HUGO itself is written in Go) make use of <a href=https://go.dev/blog/using-go-modules target=_blank rel=noopener>Go Modules</a>. In order to base your project on Wochemy you have to declare the dependency in the file <code>go.mod</code> in your site&rsquo;s root directory:</p>
+<pre><code>module github.com/wowchemy/starter-hugo-academic
+
+go 1.15
+
+require github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5 v5.0.0-20220220173604-a956bdff0252 // indirect
+</code></pre>
+<p>I very much like this approach, as I am able to pinpoint the specific Wowchemy version in a transparent manner and do not have to rely on the somewhat cumbersome Git submodules anymore. But arguably this is a personal preference.</p>
+<p>But after performing these updates, how did I fix my site&rsquo;s build with all the breaking changes in the configuration? First I tried to fix compiler error by compiler error. As this turned out to be very time-consuming, and I had the fear of missing new Wowchemy features, I took the opposite approach: I took an <a href=https://github.com/wowchemy/starter-hugo-academic/tree/master/exampleSite target=_blank rel=noopener>example site</a> as a base, hollowed it out, and added my poor existing content. This way I learned a lot about the new widgets and features.</p>
+<p>Though the documentation of Wowchemy is very informative in general, I stumbled across a handful of spots where it wasn&rsquo;t up-to-date and listed outdated configuration parameters. This somehow diminished the otherwise good impression. But in my opinion, the fact that it is an actively maintained project weighs this out. In the end these were minor issues that could be easily worked around with a mix of Stack Overflow and inspecting the <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>Wowchemy sources</a>.</p>
+<p>All things considered, I am very happy with Wowchemy. Site relaunch succeeded &mdash; <strong>cheers!</strong> 🍻</p>
+</div>
+<div class=article-tags>
+<a class="badge badge-light" href=/tags/hugo/>HUGO</a>
+<a class="badge badge-light" href=/tags/wowchemy/>Wowchemy</a>
+<a class="badge badge-light" href=/tags/academic/>Academic</a>
+</div>
+<div class=share-box>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/&text=Site%20relaunch%20/%20part%20#1%20%f0%9f%8d%bb%20%f0%9f%98%8e%f0%9f%a4%98%f0%9f%8f%bc" target=_blank rel=noopener class=share-btn-twitter aria-label=twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Site%20relaunch%20/%20part%20#1%20%f0%9f%8d%bb%20%f0%9f%98%8e%f0%9f%a4%98%f0%9f%8f%bc%20https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/" target=_blank rel=noopener class=share-btn-whatsapp aria-label=whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Site%20relaunch%20/%20part%20#1%20%f0%9f%8d%bb%20%f0%9f%98%8e%f0%9f%a4%98%f0%9f%8f%bc&body=https://stefanneuhaus.org/post/site-relaunch-2022-02-part1/" target=_blank rel=noopener class=share-btn-email aria-label=envelope>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://stefanneuhaus.org/><img class="avatar mr-3 avatar-circle" src=/authors/stefan/avatar_hu66d10eb0b48eabc157c3de1f3950f416_11647_270x270_fill_q75_lanczos_center.jpg alt="Stefan Neuhaus"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://stefanneuhaus.org/>Stefan Neuhaus</a></h5>
+<h6 class=card-subtitle>Lecturer</h6>
+<p class=card-text>My interests include Software Development, Heavy Metal, and Sports. 🏃🏼‍♂️</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href="mailto:?to=stefan@stefanneuhaus.org">
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/toothrot617 target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/stefanneuhaus target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://hub.docker.com/u/stefanneuhaus target=_blank rel=noopener>
+<i class="fab fa-docker"></i>
+</a>
+</li>
+<li>
+<a href=https://www.xing.com/profile/Stefan_Neuhaus37 target=_blank rel=noopener>
+<i class="fab fa-xing"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class=page-footer>
+<div class=container>
+<footer class=site-footer>
+<p class="powered-by copyright-license-text">
+© 2022 Stefan Neuhaus
+</p>
+<p class=powered-by>
+Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target=_blank rel=noopener>Wowchemy</a> — the free, <a href=https://github.com/wowchemy/wowchemy-hugo-themes target=_blank rel=noopener>open source</a> website builder that empowers creators.
+</p>
+</footer>
+</div>
+</div>
+<script src=/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js></script>
+<script src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin=anonymous></script>
+<script id=search-hit-fuse-template type=text/x-template>
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+<script src=https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin=anonymous></script>
+<script id=page-data type=application/json>{"use_headroom":true}</script>
+<script src=/js/wowchemy-headroom.79343bd00de25e04f03b6af2819f8643.js type=module></script>
+<script src=/en/js/wowchemy.min.1d55fb743142212360b1fa821e607151.js></script>
+</body>
+</html>
